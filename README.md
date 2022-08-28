@@ -8,7 +8,7 @@ In theory, one could specify a different fallout function based on the many comb
 
 In order to understand the risk profile of a rate lock, we need to determine a valuation model for them. A rate lock can be viewed as a put option on a mortgage. This is because the borrower has the right but not an obligation to sell the mortgage, and whether or not the mortgagee chooses to sell the loan depends somewhat on mortgage price movements.
 
-There are two reasons not to evaluate these options using a traditional Black-Scholes formula:
+There are two reasons not to evaluate these options, such as barrier option (https://finpricing.com/lib/EqBarrier.html) using a traditional Black-Scholes formula:
 
 • The returns of mortgage prices are not normally distributed. Mortgage price movements experience compression (lower volatility) as prices rise and decompression
 (higher volatility) as prices fall.
@@ -26,13 +26,7 @@ In order to do so, one needs to decide what the appropriate settlement date woul
 
 In some cases, the first available date for the delivery of a closed rate lock will be past the last provided settlement date (i.e. in the current example, this would be later than 11/2/2003). In this case, we need to extrapolate the forward prices at the later settlement dates. The settlement dates beyond the dates listed in the market data input section are again user defined, and in the case we examined appeared to be set in monthly interval past the last listed settlement date. 
 
-References:
 
-https://finpricing.com/lib/EqBarrier.html
-
-https://zenodo.org/record/6549162/files/rateLock.pdf
-
-https://zenodo.org/record/6549162#.YpDvjagpDq4
 
 
 
